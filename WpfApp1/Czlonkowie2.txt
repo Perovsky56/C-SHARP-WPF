@@ -1,0 +1,8 @@
+Imię: Jan
+Nazwisko: Kowalski
+Stopień naukowy: Doktor habilitowany
+Członek naukowy od 14.02.2018 00:00:00
+Zakres prac do wykonania: 
+Symulacje komputerowe
+Badania eksperymentalne
+Szkolenia

@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="480" Width="600" Background="#FFD8D8D8" Closing="Window_Closing">
+    <Grid Margin="0, 0, 0, 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="300"/>
+        </Grid.ColumnDefinitions>
+        <DockPanel Name="dockPanel" LastChildFill="False" Height="24" VerticalAlignment="Top" Grid.ColumnSpan="2">
+            <Menu Name="menu1" Height="22" VerticalAlignment="Top" Width="auto" DockPanel.Dock="Top">
+                <MenuItem Header="_Plik" FontFamily="Arial Black">
+                    <MenuItem Header="Nowy członek zespołu" Name="newMember" FontFamily="Arial Black">
+
+                    </MenuItem>
+                    <MenuItem Header="Zapisz dane członka" Name="saveMember" FontFamily="Arial Black" IsEnabled="false">
+
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="_Wyjdź" Name="exit" FontFamily="Arial Black" Click="exit_Click">
+
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Header="Pomoc" FontFamily="Arial Black">
+                    <MenuItem Header="O programie" Name="aboutMember" FontFamily="Arial Black" Click="aboutMember_Click">
+
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <Label Content="Imię" HorizontalAlignment="Left" Margin="20,30,0,0" Width="100" VerticalAlignment="Top" FontSize="14" Height="29"/>
+        <Label Content="Nazwisko" HorizontalAlignment="Left" Margin="20,60,0,0" Width="100" VerticalAlignment="Top" FontSize="14" Height="29"/>
+        <Label Content="Stopień/tytuł" HorizontalAlignment="Left" Margin="20,90,0,0" Width="100" VerticalAlignment="Top" FontSize="14" Height="29"/>
+        <Label Content="Członek od:" HorizontalAlignment="Left" Margin="20,120,0,0" Width="100" VerticalAlignment="Top" FontSize="14" Height="29"/>
+        <TextBox Name="name" HorizontalAlignment="Left" Height="23" Margin="140,35,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" FontFamily="Times New Roman" FontSize="14" Foreground="Red"/>
+        <TextBox Name="surname" HorizontalAlignment="Left" Height="23" Margin="140,65,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158" FontFamily="Times New Roman" FontSize="14" Foreground="Red"/>
+        <ComboBox Name="nazwyStopni" HorizontalAlignment="Left" Margin="140,95,0,0" VerticalAlignment="Top" Width="158" Foreground="Red" FontFamily="Times New Roman" Height="20"/>
+        <WindowsFormsHost Name="HostCzlonekOd" HorizontalAlignment="Left" Height="71" Margin="20,154,0,0" VerticalAlignment="Top" Width="270">
+
+        </WindowsFormsHost>
+        <GroupBox Name="doswiadczenie" Header="Doświadczenie zawodowe" HorizontalAlignment="Left" Height="193" Margin="20,230,0,0" VerticalAlignment="Top" Width="270">
+            <StackPanel Name="stackPanel" Margin="10, 10, 10, 10">
+                <RadioButton Name="Nowy" Content="Poniżej roku" Height="16" Margin="0, 10, 0, 0"/>
+                <RadioButton Name="Sredni" Height="16" Margin="0, 20, 0, 0">Od 1 roku do 4 lat</RadioButton>
+                <RadioButton Name="Doswiadczony" Height="16" Margin="0, 20, 0, 0">Od 5 roku do 9 lat</RadioButton>
+                <RadioButton Name="Expert" Height="16" Margin="0, 20, 0, 0">Powyżej 9 lat</RadioButton>
+            </StackPanel>
+        </GroupBox>
+        <ListBox Name="zakresPrac" Grid.Column="1" HorizontalAlignment="Left" Height="404" Margin="10,30,10,250" VerticalAlignment="Top" Width="272" FontSize="14"/>
+        <Button Name="clear" Content="Wyczyść" Grid.Column="1" HorizontalAlignment="Left" Margin="100,230,0,0" VerticalAlignment="Top" Width="98" FontFamily="Calibri" Height="35" FontWeight="Bold" FontSize="14"/>
+
+
+
+    </Grid>
+</Window>
